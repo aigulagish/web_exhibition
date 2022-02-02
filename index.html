@@ -7,41 +7,16 @@
     <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/push-to-talk-button.js"></script>
     <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/big-transcript.js"></script>
     <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/error-panel.js"></script>
-
-    <script type="text/javascript">
-    document
-      .getElementsByTagName("push-to-talk-button")[0]
-      .addEventListener("speechsegment", (e) => {
-        const segment = e.detail;
-        // Handle speech segment and make tentative changes to app state
-        console.log("speechsegment message:", segment);
-        if (segment.isFinal) {
-          // Handle speech segment and make permanent changes to app state
-          // Optionally show confirmation
-          window.postMessage({ type: "speechhandled", success: true }, "*");
-        }
-     });
-    </script>
-
+    <script src="myScript.js"></script>
   </head>
+
   <body>
-    <section class="section-1">
-      <div class="container">
-       <img src="img/1.jpeg" alt="Not working">
-       <p> Morning in the Pine Forest (Three Bears) </br>  Ivan Shishkin, 1875</p>
-      </div>
-    </section>
-
     <big-transcript
-   placement="top">
- </big-transcript>
-
- <error-panel
-   placement="bottom">
- </error-panel>
+      placement="top">
+    </big-transcript>
 
     <push-to-talk-button
-      appid="Yebb102f2-7107-413f-817f-07c2fc6864db"
+      appid="ebb102f2-7107-413f-817f-07c2fc6864db"
       placement="bottom"
       hide="false"
       capturekey=" "
@@ -49,7 +24,16 @@
       size="80px" >
     </push-to-talk-button>
 
+    <error-panel placement="bottom"></error-panel>
 
+    <main>
+      <section class="section-1">
+        <div class="container">
+         <img src="img/1.jpeg" alt="Not working">
+         <p> Morning in the Pine Forest (Three Bears) </br>  Ivan Shishkin, 1875</p>
+        </div>
+      </section>
 
+    </main>
   </body>
 </html>>
