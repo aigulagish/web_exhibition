@@ -1,0 +1,38 @@
+body{
+  margin: 0;
+  background-color: #1d1e22;
+}
+
+.section{
+  height: 100vh;
+}
+
+.image{
+  height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p{
+  width: 80%;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Arial";
+  opacity: 1;
+  font-size: 38px;
+}
+
+center {
+    position: absolute;
+    display: flex;
+    text-align: center;
+}
