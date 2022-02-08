@@ -1,7 +1,10 @@
 document
   .getElementsByTagName("push-to-talk-button")[0]
   .addEventListener("speechsegment", (e) => {
-    e.detail.entities.forEach(entity => {
-      document.getElementById(entity.type).value = entity.value;
-    })
+
+    const speechSegment = e.detail;
+    if (speechSegment.intent.isFinal) {
+      document.getElementById(speechSegment.intent['intent'])
+              .scrollIntoView({behavior:'smooth'});
+    }
   });
